@@ -324,19 +324,8 @@
   .proj-wrap{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:50px; margin-top:50px; align-items:center; text-decoration:none; color:inherit; cursor:pointer; transition:transform .35s ease; }
   .proj-wrap:hover{ transform:translateY(-4px); }
   .proj-wrap:hover .mock-login{ box-shadow:0 34px 64px -24px rgba(63,213,132,0.4); }
-  .mock-login{ background:linear-gradient(160deg,#0c2419,#08160f); border-radius:16px; padding:46px 30px; border:1px solid var(--line); position:relative; overflow:hidden; }
-  .mock-login::before{ content:''; position:absolute; inset:0; background:
-      radial-gradient(circle at 30% 20%, rgba(63,213,132,0.12), transparent 55%);
-  }
-  .mock-card{ position:relative; background:rgba(11,29,20,0.72); border:1px solid var(--line-strong); border-radius:12px; padding:26px; backdrop-filter:blur(6px); }
-  .mock-icon{ width:34px; height:34px; border-radius:9px; background:var(--mint); display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
-  .mock-icon svg{ width:18px; height:18px; stroke:var(--ink); }
-  .mock-card h4{ font-family:var(--font-body); font-weight:600; font-size:15px; }
-  .mock-card p{ font-size:12px; color:var(--mint-soft); margin-top:6px; }
-  .mock-field{ margin-top:16px; }
-  .mock-field span{ font-family:var(--font-mono); font-size:9.5px; letter-spacing:.08em; color:var(--mint-soft); text-transform:uppercase; }
-  .mock-field .box{ margin-top:6px; height:32px; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:7px; }
-  .mock-btn{ margin-top:20px; height:36px; border-radius:7px; background:linear-gradient(90deg,var(--mint),#2ec48f); display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:11.5px; color:var(--ink); font-weight:500; }
+  .mock-login{ border-radius:16px; border:1px solid var(--line); position:relative; overflow:hidden; line-height:0; }
+  .mock-login img{ display:block; width:100%; height:100%; object-fit:cover; }
 
   .proj-copy .tag2{ font-family:var(--font-mono); font-size:11px; color:var(--mint); letter-spacing:.06em; }
   .proj-copy h3{ font-family:var(--font-display); font-size:28px; margin:14px 0 16px; }
@@ -724,14 +713,7 @@
   </div>
   <a class="proj-wrap reveal" href="https://dashboards-web-seven.vercel.app" target="_blank" rel="noopener" aria-label="Ver el Centro de Gestión Agrícola en producción (abre en una pestaña nueva)">
     <div class="mock-login">
-      <div class="mock-card">
-        <div class="mock-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2v6M12 22v-6M5 12H2M22 12h-3M7 7l-2-2M19 19l-2-2M7 17l-2 2M19 5l-2 2"/></svg></div>
-        <h4>Exportadora Alcántara</h4>
-        <p>Inicia sesión para entrar a Centro de Gestión Agrícola.</p>
-        <div class="mock-field"><span>Usuario</span><div class="box"></div></div>
-        <div class="mock-field"><span>Contraseña</span><div class="box"></div></div>
-        <div class="mock-btn">Entrar</div>
-      </div>
+      <img src="img/caso-alcantara-login.jpg" alt="Pantalla de inicio de sesión del Centro de Gestión Agrícola, Exportadora Alcántara" loading="lazy">
     </div>
     <div class="proj-copy">
       <div class="tag2">Fundo Alcántara</div>
