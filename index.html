@@ -321,7 +321,9 @@
 
   /* ---------- proyectos ---------- */
   #proyectos{ padding:110px 8vw 120px; }
-  .proj-wrap{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:50px; margin-top:50px; align-items:center; }
+  .proj-wrap{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:50px; margin-top:50px; align-items:center; text-decoration:none; color:inherit; cursor:pointer; transition:transform .35s ease; }
+  .proj-wrap:hover{ transform:translateY(-4px); }
+  .proj-wrap:hover .mock-login{ box-shadow:0 34px 64px -24px rgba(63,213,132,0.4); }
   .mock-login{ background:linear-gradient(160deg,#0c2419,#08160f); border-radius:16px; padding:46px 30px; border:1px solid var(--line); position:relative; overflow:hidden; }
   .mock-login::before{ content:''; position:absolute; inset:0; background:
       radial-gradient(circle at 30% 20%, rgba(63,213,132,0.12), transparent 55%);
@@ -336,26 +338,44 @@
   .mock-field .box{ margin-top:6px; height:32px; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:7px; }
   .mock-btn{ margin-top:20px; height:36px; border-radius:7px; background:linear-gradient(90deg,var(--mint),#2ec48f); display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:11.5px; color:var(--ink); font-weight:500; }
 
-  .mock-dash{ background:#0F2A1D; border-radius:16px; border:1px solid var(--line); overflow:hidden; box-shadow:0 30px 60px -30px rgba(0,0,0,0.6); }
-  .mock-dash .bar{ height:0; }
-  .dash-top{ display:flex; justify-content:space-between; align-items:center; padding:14px 18px; border-bottom:1px solid var(--line); }
-  .dash-top .brand{ display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:11px; color:var(--mint-soft); }
-  .dash-top .dot{ width:6px; height:6px; border-radius:50%; background:var(--mint); }
-  .dash-top .pill{ font-size:10px; font-family:var(--font-mono); color:var(--mint); border:1px solid var(--line-strong); padding:4px 10px; border-radius:20px; }
-  .dash-body{ padding:18px; display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
-  .dash-tile{ background:rgba(255,255,255,0.04); border:1px solid var(--line); border-radius:9px; padding:12px; height:64px; display:flex; flex-direction:column; justify-content:space-between; }
-  .dash-tile span{ font-family:var(--font-mono); font-size:9px; color:var(--mint-soft); }
-  .dash-tile b{ font-family:var(--font-mono); font-size:15px; color:var(--white); }
-  .dash-map{ grid-column:span 4; margin-top:2px; height:110px; border-radius:9px; background:
-    repeating-linear-gradient(45deg, rgba(63,213,132,0.07) 0 2px, transparent 2px 14px), #0B2015;
-    border:1px solid var(--line); position:relative; }
-  .dash-map .pin{ position:absolute; width:8px; height:8px; border-radius:50%; background:var(--mint); box-shadow:0 0 0 5px rgba(63,213,132,0.18); }
-  .proj-caption{ margin-top:16px; font-size:12.5px; color:var(--mint-soft); font-family:var(--font-mono); }
   .proj-copy .tag2{ font-family:var(--font-mono); font-size:11px; color:var(--mint); letter-spacing:.06em; }
   .proj-copy h3{ font-family:var(--font-display); font-size:28px; margin:14px 0 16px; }
   .proj-copy p{ font-size:15px; color:var(--mint-soft); line-height:1.6; max-width:46ch; }
   .proj-tags{ display:flex; gap:10px; margin-top:24px; flex-wrap:wrap; }
   .proj-tags span{ font-family:var(--font-mono); font-size:11px; border:1px solid var(--line-strong); padding:6px 12px; border-radius:20px; color:var(--mint-soft); }
+  .proj-link-hint{ margin-top:28px; display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12.5px; color:var(--mint); }
+  .proj-link-hint svg{ width:13px; height:13px; transition:transform .25s ease; }
+  .proj-wrap:hover .proj-link-hint svg{ transform:translate(3px,-3px); }
+
+  /* ---------- proyectos: funcionalidades reales ---------- */
+  .feat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin-top:64px; background:var(--line); border:1px solid var(--line); }
+  .feat-card{ background:var(--void); padding:28px 24px; transition:background .3s ease, box-shadow .3s ease; }
+  .feat-card:hover{ background:var(--panel); box-shadow:inset 0 0 0 1px var(--line-strong); }
+  .feat-card h4{ font-family:var(--font-body); font-weight:600; font-size:15px; margin:20px 0 8px; }
+  .feat-card p{ font-size:13px; color:var(--mint-soft); line-height:1.55; }
+  .feat-mock{ height:118px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,0.02); padding:14px 16px; display:flex; flex-direction:column; justify-content:center; gap:7px; position:relative; overflow:hidden; }
+
+  .fm-row{ display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:10.5px; color:var(--mint-soft); }
+  .fm-row b{ color:var(--mint); font-weight:500; }
+  .fm-bar{ height:4px; background:rgba(255,255,255,0.07); border-radius:3px; overflow:hidden; margin-bottom:3px; }
+  .fm-bar i{ display:block; height:100%; background:linear-gradient(90deg,var(--mint-mid),var(--mint)); border-radius:3px; }
+
+  .fm-map{ justify-content:flex-start; background:
+    repeating-linear-gradient(45deg, rgba(63,213,132,0.06) 0 2px, transparent 2px 14px), #0B2015; }
+  .fm-pill{ position:absolute; top:10px; left:12px; font-family:var(--font-mono); font-size:9.5px; color:var(--mint); border:1px solid var(--line-strong); padding:3px 9px; border-radius:20px; background:rgba(11,29,20,0.65); }
+  .fm-pin{ position:absolute; width:8px; height:8px; border-radius:50%; background:var(--mint); box-shadow:0 0 0 5px rgba(63,213,132,0.18); }
+
+  .fm-list{ justify-content:center; gap:11px; }
+  .fm-item{ display:flex; align-items:center; gap:9px; font-family:var(--font-mono); font-size:10.5px; color:var(--mint-soft); }
+  .fm-dot{ width:6px; height:6px; border-radius:50%; background:var(--mint); flex-shrink:0; }
+  .fm-dot.warn{ background:#F7C978; }
+
+  .fm-doc{ flex-direction:row; gap:10px; }
+  .fm-doc-card{ flex:1; background:rgba(255,255,255,0.03); border:1px solid var(--line); border-radius:8px; padding:10px; display:flex; flex-direction:column; gap:10px; font-family:var(--font-mono); font-size:10px; color:var(--mint-soft); }
+  .fm-doc-tag{ align-self:flex-start; font-size:9px; font-weight:600; padding:2px 6px; border-radius:4px; letter-spacing:.04em; }
+  .fm-doc-tag.pdf{ background:rgba(247,90,90,0.18); color:#FF8A8A; }
+  .fm-doc-tag.xls{ background:rgba(63,213,132,0.18); color:var(--mint); }
+  @media (max-width:1100px){ .feat-grid{ grid-template-columns:repeat(2,1fr); } }
 
   /* ---------- pipeline (como trabajamos) ---------- */
   #proceso{ padding:110px 8vw 130px; }
@@ -448,7 +468,7 @@
     #dotnav{ display:none; }
     #conduit{ display:none; }
     section{ padding:0 6vw; }
-    .svc-grid, .reason-grid, .quote-grid, .plan-grid, .pay-grid, .pipe-steps{ grid-template-columns:1fr !important; }
+    .svc-grid, .reason-grid, .quote-grid, .plan-grid, .pay-grid, .pipe-steps, .feat-grid{ grid-template-columns:1fr !important; }
     .proj-wrap, .tabpanel{ grid-template-columns:1fr !important; }
     .chart-wrap{ gap:20px; }
     #hero h1{ font-size:15vw; }
@@ -699,8 +719,9 @@
   <div class="head-block reveal" style="padding-top:110px;">
     <div class="eyebrow">Nuestros proyectos</div>
     <h2>Un caso real, en producción</h2>
+    <p class="lede">Centro de Gestión Agrícola para Exportadora Alcántara: reemplazó planillas Excel y WhatsApp por un sistema que su equipo usa todos los días.</p>
   </div>
-  <div class="proj-wrap reveal">
+  <a class="proj-wrap reveal" href="https://dashboards-web-seven.vercel.app" target="_blank" rel="noopener" aria-label="Ver el Centro de Gestión Agrícola en producción (abre en una pestaña nueva)">
     <div class="mock-login">
       <div class="mock-card">
         <div class="mock-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2v6M12 22v-6M5 12H2M22 12h-3M7 7l-2-2M19 19l-2-2M7 17l-2 2M19 5l-2 2"/></svg></div>
@@ -713,20 +734,52 @@
     </div>
     <div class="proj-copy">
       <div class="tag2">Fundo Alcántara</div>
-      <h3>Panel de Gestión Agrícola</h3>
-      <p>Desarrollado a medida: clima, riego, aplicaciones y cumplimiento de fertilización en un solo lugar.</p>
-      <div class="mock-dash" style="margin-top:26px;">
-        <div class="dash-top"><div class="brand"><span class="dot"></span>Análisis y Gestión</div><div class="pill">En vivo</div></div>
-        <div class="dash-body">
-          <div class="dash-tile"><span>Clima hoy</span><b>9°C</b></div>
-          <div class="dash-tile"><span>Riego activo</span><b>3 zonas</b></div>
-          <div class="dash-tile"><span>Fertilización</span><b>92%</b></div>
-          <div class="dash-tile"><span>Alertas</span><b>0</b></div>
-          <div class="dash-map"><div class="pin" style="top:30%; left:22%;"></div><div class="pin" style="top:55%; left:60%;"></div><div class="pin" style="top:70%; left:40%;"></div></div>
-        </div>
+      <h3>Un sistema, todos los procesos del campo</h3>
+      <p>Riego, fertilización, tarjas de trabajo, órdenes de compra, arriendo de maquinaria y sensores en vivo — en un solo lugar, con reportes que antes tomaban horas armar a mano.</p>
+      <div class="proj-tags"><span>Riego</span><span>Fertilización</span><span>Sensores en vivo</span><span>PDF y Excel</span><span>~15 usuarios activos</span></div>
+      <div class="proj-link-hint">Ver proyecto en vivo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+    </div>
+  </a>
+
+  <div class="feat-grid reveal-stagger">
+    <div class="feat-card">
+      <div class="feat-mock">
+        <div class="fm-row"><span>Sector A2</span><b>82%</b></div>
+        <div class="fm-bar"><i style="width:82%"></i></div>
+        <div class="fm-row"><span>Sector B1</span><b>64%</b></div>
+        <div class="fm-bar"><i style="width:64%"></i></div>
+        <div class="fm-row"><span>Sector C4</span><b>97%</b></div>
+        <div class="fm-bar"><i style="width:97%"></i></div>
       </div>
-      <p class="proj-caption">Vista general — clima, mapa de campos y estado del día</p>
-      <div class="proj-tags"><span>Clima</span><span>Riego</span><span>Cumplimiento</span><span>Multi-campo</span></div>
+      <h4>Riego y fertilización por sector</h4>
+      <p>Programación y seguimiento por sector de campo, con historial de aplicaciones y cumplimiento al día.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-mock fm-map">
+        <div class="fm-pill">● En vivo</div>
+        <div class="fm-pin" style="top:32%; left:26%;"></div>
+        <div class="fm-pin" style="top:58%; left:64%;"></div>
+        <div class="fm-pin" style="top:76%; left:40%;"></div>
+      </div>
+      <h4>Mapa de sensores en vivo</h4>
+      <p>Clima y estado de las estaciones del campo, integrado directo con WiseConn/DropControl.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-mock fm-list">
+        <div class="fm-item"><span class="fm-dot"></span>Tarja #128 · Riego sector A2</div>
+        <div class="fm-item"><span class="fm-dot warn"></span>OC #044 · Fertilizante foliar</div>
+        <div class="fm-item"><span class="fm-dot"></span>Arriendo · Retroexcavadora</div>
+      </div>
+      <h4>Tarjas, compras y maquinaria</h4>
+      <p>Tarjas de trabajo diarias, órdenes de compra y arriendo de maquinaria en un mismo flujo.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-mock fm-doc">
+        <div class="fm-doc-card"><span class="fm-doc-tag pdf">PDF</span>Tarja de trabajo</div>
+        <div class="fm-doc-card"><span class="fm-doc-tag xls">XLS</span>Consumo bodega</div>
+      </div>
+      <h4>PDF y Excel automáticos</h4>
+      <p>Tarjas, órdenes y proformas se generan solas, con la identidad de marca del cliente.</p>
     </div>
   </div>
 </section>
