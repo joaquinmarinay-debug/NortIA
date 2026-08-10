@@ -323,9 +323,10 @@
   #proyectos{ padding:110px 8vw 120px; }
   .proj-wrap{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:50px; margin-top:50px; align-items:center; text-decoration:none; color:inherit; cursor:pointer; transition:transform .35s ease; }
   .proj-wrap:hover{ transform:translateY(-4px); }
-  .proj-wrap:hover .mock-login{ box-shadow:0 34px 64px -24px rgba(63,213,132,0.4); }
-  .mock-login{ border-radius:16px; border:1px solid var(--line); position:relative; overflow:hidden; line-height:0; }
-  .mock-login img{ display:block; width:100%; height:100%; object-fit:cover; }
+  .proj-wrap:hover .proj-media{ box-shadow:0 34px 64px -24px rgba(63,213,132,0.4); }
+  .proj-media{ border-radius:16px; border:1px solid var(--line); position:relative; overflow:hidden; line-height:0; aspect-ratio:1.95/1; }
+  .proj-media.tall{ aspect-ratio:5/4; }
+  .proj-media img{ display:block; width:100%; height:100%; object-fit:cover; object-position:top; }
 
   .proj-copy .tag2{ font-family:var(--font-mono); font-size:11px; color:var(--mint); letter-spacing:.06em; }
   .proj-copy h3{ font-family:var(--font-display); font-size:28px; margin:14px 0 16px; }
@@ -678,11 +679,11 @@
 <section id="proyectos" class="dark">
   <div class="head-block reveal" style="padding-top:110px;">
     <div class="eyebrow">Nuestros proyectos</div>
-    <h2>Un caso real, en producción</h2>
-    <p class="lede">Centro de Gestión Agrícola para Exportadora Alcántara: reemplazó planillas Excel y WhatsApp por un sistema que su equipo usa todos los días.</p>
+    <h2>Casos reales, en producción</h2>
+    <p class="lede">Sistemas a medida que ya reemplazan planillas, cuadernos y WhatsApp en negocios reales.</p>
   </div>
   <a class="proj-wrap reveal" href="https://dashboards-web-seven.vercel.app" target="_blank" rel="noopener" aria-label="Ver el Centro de Gestión Agrícola en producción (abre en una pestaña nueva)">
-    <div class="mock-login">
+    <div class="proj-media">
       <img src="img/caso-alcantara-login.jpg" alt="Pantalla de inicio de sesión del Centro de Gestión Agrícola, Exportadora Alcántara" loading="lazy">
     </div>
     <div class="proj-copy">
@@ -690,6 +691,19 @@
       <h3>Un sistema, todos los procesos del campo</h3>
       <p>Riego, fertilización, tarjas de trabajo, órdenes de compra, arriendo de maquinaria y sensores en vivo — en un solo lugar, con reportes que antes tomaban horas armar a mano.</p>
       <div class="proj-tags"><span>Riego</span><span>Fertilización</span><span>Sensores en vivo</span><span>PDF y Excel</span><span>~15 usuarios activos</span></div>
+      <div class="proj-link-hint">Ver proyecto en vivo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+    </div>
+  </a>
+
+  <a class="proj-wrap reveal" href="https://paltas-don-rorro.vercel.app" target="_blank" rel="noopener" aria-label="Ver Paltas Don Rorro en producción (abre en una pestaña nueva)" style="margin-top:36px;">
+    <div class="proj-media tall">
+      <img src="img/caso-paltas-don-rorro.jpg" alt="Paltas Don Rorro — identidad de marca para negocio de compra y venta de paltas" loading="lazy">
+    </div>
+    <div class="proj-copy">
+      <div class="tag2">Paltas Don Rorro</div>
+      <h3>De cuadernos y WhatsApp a un panel que ordena el negocio</h3>
+      <p>Compras, ventas, clientes y reportes para una pyme de compra y venta de paltas — con ranking de clientes, predicción de próxima compra y reportes exportables a Excel y PDF.</p>
+      <div class="proj-tags"><span>Compras y ventas</span><span>Clientes</span><span>Reportes y gráficos</span><span>Excel y PDF</span><span>Facturación</span></div>
       <div class="proj-link-hint">Ver proyecto en vivo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
     </div>
   </a>
