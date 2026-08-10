@@ -324,9 +324,8 @@
   .proj-wrap{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:50px; margin-top:50px; align-items:center; text-decoration:none; color:inherit; cursor:pointer; transition:transform .35s ease; }
   .proj-wrap:hover{ transform:translateY(-4px); }
   .proj-wrap:hover .proj-media{ box-shadow:0 34px 64px -24px rgba(63,213,132,0.4); }
-  .proj-media{ border-radius:16px; border:1px solid var(--line); position:relative; overflow:hidden; line-height:0; aspect-ratio:1.95/1; }
-  .proj-media.tall{ aspect-ratio:5/4; }
-  .proj-media img{ display:block; width:100%; height:100%; object-fit:cover; object-position:top; }
+  .proj-media{ border-radius:16px; position:relative; overflow:hidden; line-height:0; aspect-ratio:1.95/1; }
+  .proj-media img{ display:block; width:100%; height:100%; object-fit:contain; }
 
   .proj-copy .tag2{ font-family:var(--font-mono); font-size:11px; color:var(--mint); letter-spacing:.06em; }
   .proj-copy h3{ font-family:var(--font-display); font-size:28px; margin:14px 0 16px; }
@@ -696,7 +695,7 @@
   </a>
 
   <a class="proj-wrap reveal" href="https://paltas-don-rorro.vercel.app" target="_blank" rel="noopener" aria-label="Ver Paltas Don Rorro en producción (abre en una pestaña nueva)" style="margin-top:36px;">
-    <div class="proj-media tall">
+    <div class="proj-media">
       <img src="img/caso-paltas-don-rorro.jpg" alt="Paltas Don Rorro — identidad de marca para negocio de compra y venta de paltas" loading="lazy">
     </div>
     <div class="proj-copy">
