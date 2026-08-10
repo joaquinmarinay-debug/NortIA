@@ -336,36 +336,6 @@
   .proj-link-hint svg{ width:13px; height:13px; transition:transform .25s ease; }
   .proj-wrap:hover .proj-link-hint svg{ transform:translate(3px,-3px); }
 
-  /* ---------- proyectos: funcionalidades reales ---------- */
-  .feat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin-top:64px; background:var(--line); border:1px solid var(--line); }
-  .feat-card{ background:var(--void); padding:28px 24px; transition:background .3s ease, box-shadow .3s ease; }
-  .feat-card:hover{ background:var(--panel); box-shadow:inset 0 0 0 1px var(--line-strong); }
-  .feat-card h4{ font-family:var(--font-body); font-weight:600; font-size:15px; margin:20px 0 8px; }
-  .feat-card p{ font-size:13px; color:var(--mint-soft); line-height:1.55; }
-  .feat-mock{ height:118px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,0.02); padding:14px 16px; display:flex; flex-direction:column; justify-content:center; gap:7px; position:relative; overflow:hidden; }
-
-  .fm-row{ display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:10.5px; color:var(--mint-soft); }
-  .fm-row b{ color:var(--mint); font-weight:500; }
-  .fm-bar{ height:4px; background:rgba(255,255,255,0.07); border-radius:3px; overflow:hidden; margin-bottom:3px; }
-  .fm-bar i{ display:block; height:100%; background:linear-gradient(90deg,var(--mint-mid),var(--mint)); border-radius:3px; }
-
-  .fm-map{ justify-content:flex-start; background:
-    repeating-linear-gradient(45deg, rgba(63,213,132,0.06) 0 2px, transparent 2px 14px), #0B2015; }
-  .fm-pill{ position:absolute; top:10px; left:12px; font-family:var(--font-mono); font-size:9.5px; color:var(--mint); border:1px solid var(--line-strong); padding:3px 9px; border-radius:20px; background:rgba(11,29,20,0.65); }
-  .fm-pin{ position:absolute; width:8px; height:8px; border-radius:50%; background:var(--mint); box-shadow:0 0 0 5px rgba(63,213,132,0.18); }
-
-  .fm-list{ justify-content:center; gap:11px; }
-  .fm-item{ display:flex; align-items:center; gap:9px; font-family:var(--font-mono); font-size:10.5px; color:var(--mint-soft); }
-  .fm-dot{ width:6px; height:6px; border-radius:50%; background:var(--mint); flex-shrink:0; }
-  .fm-dot.warn{ background:#F7C978; }
-
-  .fm-doc{ flex-direction:row; gap:10px; }
-  .fm-doc-card{ flex:1; background:rgba(255,255,255,0.03); border:1px solid var(--line); border-radius:8px; padding:10px; display:flex; flex-direction:column; gap:10px; font-family:var(--font-mono); font-size:10px; color:var(--mint-soft); }
-  .fm-doc-tag{ align-self:flex-start; font-size:9px; font-weight:600; padding:2px 6px; border-radius:4px; letter-spacing:.04em; }
-  .fm-doc-tag.pdf{ background:rgba(247,90,90,0.18); color:#FF8A8A; }
-  .fm-doc-tag.xls{ background:rgba(63,213,132,0.18); color:var(--mint); }
-  @media (max-width:1100px){ .feat-grid{ grid-template-columns:repeat(2,1fr); } }
-
   /* ---------- pipeline (como trabajamos) ---------- */
   #proceso{ padding:110px 8vw 130px; }
   .pipe-wrap{ position:relative; margin-top:70px; }
@@ -457,7 +427,7 @@
     #dotnav{ display:none; }
     #conduit{ display:none; }
     section{ padding:0 6vw; }
-    .svc-grid, .reason-grid, .quote-grid, .plan-grid, .pay-grid, .pipe-steps, .feat-grid, .pillar-grid{ grid-template-columns:1fr !important; }
+    .svc-grid, .reason-grid, .quote-grid, .plan-grid, .pay-grid, .pipe-steps, .pillar-grid{ grid-template-columns:1fr !important; }
     .proj-wrap, .tabpanel{ grid-template-columns:1fr !important; }
     .chart-wrap{ gap:20px; }
     #hero h1{ font-size:15vw; }
@@ -723,48 +693,6 @@
       <div class="proj-link-hint">Ver proyecto en vivo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
     </div>
   </a>
-
-  <div class="feat-grid reveal-stagger">
-    <div class="feat-card">
-      <div class="feat-mock">
-        <div class="fm-row"><span>Sector A2</span><b>82%</b></div>
-        <div class="fm-bar"><i style="width:82%"></i></div>
-        <div class="fm-row"><span>Sector B1</span><b>64%</b></div>
-        <div class="fm-bar"><i style="width:64%"></i></div>
-        <div class="fm-row"><span>Sector C4</span><b>97%</b></div>
-        <div class="fm-bar"><i style="width:97%"></i></div>
-      </div>
-      <h4>Riego y fertilización por sector</h4>
-      <p>Programación y seguimiento por sector de campo, con historial de aplicaciones y cumplimiento al día.</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-mock fm-map">
-        <div class="fm-pill">● En vivo</div>
-        <div class="fm-pin" style="top:32%; left:26%;"></div>
-        <div class="fm-pin" style="top:58%; left:64%;"></div>
-        <div class="fm-pin" style="top:76%; left:40%;"></div>
-      </div>
-      <h4>Mapa de sensores en vivo</h4>
-      <p>Clima y estado de las estaciones del campo, integrado directo con WiseConn/DropControl.</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-mock fm-list">
-        <div class="fm-item"><span class="fm-dot"></span>Tarja #128 · Riego sector A2</div>
-        <div class="fm-item"><span class="fm-dot warn"></span>OC #044 · Fertilizante foliar</div>
-        <div class="fm-item"><span class="fm-dot"></span>Arriendo · Retroexcavadora</div>
-      </div>
-      <h4>Tarjas, compras y maquinaria</h4>
-      <p>Tarjas de trabajo diarias, órdenes de compra y arriendo de maquinaria en un mismo flujo.</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-mock fm-doc">
-        <div class="fm-doc-card"><span class="fm-doc-tag pdf">PDF</span>Tarja de trabajo</div>
-        <div class="fm-doc-card"><span class="fm-doc-tag xls">XLS</span>Consumo bodega</div>
-      </div>
-      <h4>PDF y Excel automáticos</h4>
-      <p>Tarjas, órdenes y proformas se generan solas, con la identidad de marca del cliente.</p>
-    </div>
-  </div>
 </section>
 
 <section id="proceso" class="dark">
