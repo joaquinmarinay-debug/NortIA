@@ -327,15 +327,6 @@
   .contact-form input:focus, .contact-form textarea:focus{ border-color:var(--mint); background:var(--bg-elev); }
   .f-note{ font-size:11px; color:var(--ink-faint); text-align:center; }
 
-  #wa-float{
-    position:fixed; bottom:26px; right:26px; z-index:65;
-    width:54px; height:54px; border-radius:50%; background:var(--mint);
-    display:flex; align-items:center; justify-content:center; text-decoration:none;
-    box-shadow:0 14px 30px -10px var(--mint-tint-strong); transition:transform .25s cubic-bezier(.2,.8,.2,1);
-  }
-  #wa-float:hover{ transform:scale(1.08); }
-  #wa-float svg{ width:26px; height:26px; color:#06170f; }
-
   .cta-btn{
     font-size:13.5px; font-weight:600; background:var(--mint); color:#06170f; border:none;
     padding:16px 32px; border-radius:999px; cursor:pointer; display:inline-flex; align-items:center; gap:10px;
@@ -365,7 +356,7 @@
 
   /* ---------- chat con IA ---------- */
   #ai-chat-float{
-    position:fixed; bottom:92px; right:26px; z-index:65;
+    position:fixed; bottom:26px; right:26px; z-index:65;
     width:54px; height:54px; border-radius:50%;
     background:var(--bg-glass); border:1px solid var(--line);
     backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
@@ -376,7 +367,7 @@
   #ai-chat-float svg{ width:23px; height:23px; color:var(--mint); }
 
   #ai-chat-panel{
-    position:fixed; bottom:92px; right:26px; z-index:66;
+    position:fixed; bottom:26px; right:26px; z-index:66;
     width:360px; max-width:calc(100vw - 40px); height:520px; max-height:calc(100vh - 130px);
     background:var(--bg-glass); border:1px solid var(--line); border-radius:26px;
     backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
@@ -426,7 +417,7 @@
   #ai-chat-send:disabled{ opacity:.5; cursor:not-allowed; transform:none; }
 
   @media (max-width:600px){
-    #ai-chat-panel{ right:14px; left:14px; width:auto; bottom:88px; height:min(560px, calc(100vh - 120px)); }
+    #ai-chat-panel{ right:14px; left:14px; width:auto; bottom:90px; height:min(560px, calc(100vh - 120px)); }
     #ai-chat-float{ right:20px; }
   }
 </style>
@@ -603,10 +594,6 @@
   <span>joaquinmarinay@gmail.com · +56 9 7642 9216 · Santa Cruz, Sexta Región, Chile</span>
   <span>Desarrollo Web · Apps · Automatización · Inteligencia Artificial</span>
 </footer>
-
-<a id="wa-float" href="https://wa.me/56976429216" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg>
-</a>
 
 <button type="button" id="ai-chat-float" aria-label="Abrir asistente virtual de NortIA" aria-expanded="false">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
