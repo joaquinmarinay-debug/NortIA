@@ -43,7 +43,7 @@ CASOS REALES EN PRODUCCIÓN (puedes mencionarlos si preguntan por ejemplos o res
 - Vista Hermosa: dashboard de gasto común y consumo eléctrico para un condominio de 52 lotes.
 
 CONTACTO:
-- WhatsApp: +56 9 7642 9216 (enlace: https://wa.me/56976429216)
+- WhatsApp: +56 9 3430 4097 (enlace: https://wa.me/56934304097)
 - Correo: joaquinmarinay@gmail.com
 - El diagnóstico inicial es siempre sin costo ni compromiso. Responden dentro de 24 horas hábiles.
 
