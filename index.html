@@ -183,9 +183,23 @@
     white-space:nowrap;
   }
   .nav-cta:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 14px 26px -10px var(--mint-tint-strong); background:var(--mint-glow); }
+  .nav-ingresar{ display:flex; align-items:center; gap:6px; }
+  .nav-ingresar-icon{ display:none; width:15px; height:15px; flex-shrink:0; }
+  .nav-cta-short{ display:none; }
   @media (max-width:900px){
-    #navmenu a:not(.nav-cta){ display:none; }
-    #navbar{ padding:9px 10px 9px 16px; gap:12px; }
+    #navmenu{ gap:4px; }
+    #navmenu a:not(.nav-cta):not(.nav-ingresar){ display:none; }
+    .nav-ingresar{
+      width:34px; height:34px; padding:0; border-radius:50%; border:1px solid var(--line);
+      background:var(--bg-elev-soft); align-items:center; justify-content:center; flex-shrink:0;
+    }
+    .nav-ingresar:hover{ background:var(--mint-tint); color:var(--mint); }
+    .nav-ingresar-icon{ display:block; }
+    .nav-ingresar-label{ display:none; }
+    .nav-cta{ padding:10px 16px; white-space:nowrap; }
+    .nav-cta-full{ display:none; }
+    .nav-cta-short{ display:inline; }
+    #navbar{ padding:9px 10px 9px 16px; gap:10px; }
   }
 
   #conduit{
@@ -521,12 +535,15 @@
       <a href="#soluciones">Soluciones</a>
       <a href="#proceso">Proceso</a>
       <a href="#proyectos">Proyectos</a>
-      <a href="https://nortia-clientes.vercel.app/login" target="_blank" rel="noopener">Ingresar</a>
+      <a href="https://nortia-clientes.vercel.app/login" target="_blank" rel="noopener" class="nav-ingresar" aria-label="Ingresar al panel de clientes">
+        <svg class="nav-ingresar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+        <span class="nav-ingresar-label">Ingresar</span>
+      </a>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
       </button>
-      <a href="#contacto" class="nav-cta">Agendar diagnóstico</a>
+      <a href="#contacto" class="nav-cta"><span class="nav-cta-full">Agendar diagnóstico</span><span class="nav-cta-short">Diagnóstico</span></a>
     </div>
   </nav>
 </div>
